@@ -1,0 +1,347 @@
+<html lang="en">
+
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+function bmi()
+    {
+       var h=parseFloat(document.getElementById("height").value).toFixed(4);
+       var w=parseFloat(document.getElementById("weight").value).toFixed(4);
+        var ans=parseFloat(w/(h*h));
+       document.getElementById("bmibox").style.height="600";  
+        document.getElementById("bmians").style.display="block";  
+       document.getElementById("bmi_linear").style.display="block";       
+       document.getElementById("bmiscore").style.display="block";
+        document.getElementById("result").style.display="block";
+       document.getElementById("tri").style.display="block";
+       document.getElementById("bmians").innerHTML=ans.toFixed(2);
+      
+        
+    }
+    
+    
+function whr()
+    {
+       var h=parseFloat(document.getElementById("hip").value).toFixed(4);
+       var w=parseFloat(document.getElementById("waist").value).toFixed(4);
+        var ans=parseFloat(w/h);
+       document.getElementById("whrbox").style.height="600";  
+        
+       document.getElementById("whr_linear").style.display="block";       
+       document.getElementById("whrscore").style.display="block";
+        document.getElementById("whrresult").style.display="block";
+       document.getElementById("whrtri").style.display="block";
+       document.getElementById("whrans").innerHTML=ans.toFixed(2);
+        
+    }
+function bmidisappear()
+    {
+        document.getElementById("bmi_linear").style.display="none";       
+       document.getElementById("bmiscore").style.display="none";
+        document.getElementById("result").style.display="none";
+       document.getElementById("tri").style.display="none";
+         document.getElementById("bmians").style.display="none";
+        document.getElementById("bmibox").style.height="400"; 
+        
+    }
+
+    
+    
+    
+    
+</script>    
+<style>
+    #bmibox
+    {
+        width:auto;
+        margin-top:30px;
+        height:400px;
+        background-color: grey;
+        border: 0.1px solid white;
+        border-radius: 20px;
+        background-image: url(bmiback.png)  ;
+
+    }
+    #bmibox:hover
+    {
+        box-shadow: 5px 5px 5px rgb(10,10,10);  
+    }
+     #whrbox
+    {
+        width:auto;
+        margin-top:30px;
+        height:400px;
+        background-color: grey;
+        border: 0.1px solid white;
+        border-radius: 20px;
+        background-image: url(whrback.PNG) ;
+    }
+    #whrbox:hover
+    {
+         box-shadow: 5px 5px 5px rgb(10,10,10); 
+    }
+     #fatbox
+    {
+        width:auto;
+        margin-top:30px;
+        height:400px;
+        background-color: grey;
+        border: 0.1px solid white;
+        border-radius: 20px;
+        background-image: url(fatback.PNG);
+    }
+    #fatbox:hover
+    {
+  box-shadow: 5px 5px 5px rgb(10,10,10); 
+    }
+    #bmicontent
+    {
+        margin-top:100px;
+        margin-left:30px;
+        border:1px solid white;
+        border-radius: 20px;
+        padding:10px;
+        width:auto;
+        position:relative;
+        left:-10px;
+        box-shadow: 5px 5px 5px rgb(10,10,10); 
+        
+     
+    }
+     #whrcontent
+    {
+        margin-top:100px;
+        margin-left:30px;
+        border:1px solid white;
+        border-radius: 20px;
+        padding:10px;
+        width:auto;
+        position:relative;
+        left:-10px;
+        height:210px;
+        box-shadow: 5px 5px 5px rgb(10,10,10); 
+        
+     
+    }
+    
+    
+    #text
+    {
+       color:aliceblue;
+        font-size: 20px;
+    
+    }
+    .inputs
+    {
+        width:160px;
+        border-bottom-color: cornsilk;
+        border-radius: 20px;
+    }
+    .btn-primary
+    {
+        text-align: center;
+      
+    }
+     .btn-danger
+    {
+        text-align: center;
+      
+    }
+    .spacebmi
+    {
+        padding-left: 20px;
+    }
+    #bmians
+    {
+        color: white;
+        font-size: 33px;
+        margin-left: 120px;
+        margin-top: 20px;
+        font-weight: bolder;
+    }
+     #bmiscore
+    {
+        color: white;
+        font-size: 20px;
+        margin-left:110px;
+        margin-top: 20px;
+        font-family: cursive;
+        display: none;
+        
+    }
+    #bmi_linear
+    {
+      
+      margin-left:70px;
+        width:200px;
+        height:30px;
+        display: none;
+       box-shadow: 5px 5px 5px rgb(10,10,10); 
+    }
+    #whrans
+    {
+        color: white;
+        font-size: 33px;
+        margin-left: 120px;
+        margin-top: 20px;
+        font-weight: bolder;
+    }
+     #whrscore
+    {
+        color: white;
+        font-size: 20px;
+        margin-left:110px;
+        margin-top: 20px;
+        font-family: cursive;
+        display: none;
+        
+    }
+    #whr_linear
+    {
+      
+      margin-left:70px;
+        width:200px;
+        height:30px;
+        display: none;
+       box-shadow: 5px 5px 5px rgb(10,10,10); 
+    }
+    #tri
+    {
+        margin-left: 70px;
+        display: none;
+        position: relative;
+        top:-50px;
+        
+    }
+    #whrtri
+    {
+        margin-left: 470px;
+        display: none;
+        position: relative;
+        top:150px;
+        
+    }
+    body
+    {
+        background-color: whitesmoke;
+    }
+    #result
+    {
+        background-color: rebeccapurple;
+        padding-left:10px;
+        color:white;
+        font-size: 20px;
+        width:auto;
+        font-weight: bolder;
+        height:30px;
+       
+        display: none;
+        border:1px solid rebeccapurple;
+        border-bottom-color: white;
+        
+    }
+    #whrresult
+    {
+        background-color: red;
+        padding-left:10px;
+        color:white;
+        font-size: 20px;
+        width:350;
+        font-weight: bolder;
+        height:30px;
+  
+        display: none;
+        border:1px solid red;
+        border-bottom-color: white;
+        
+    }
+    #whr-align
+    {
+        position: relative;
+        left:-30px;
+    }
+    .upspace
+    {
+        float:right;
+    }
+    
+    
+</style>
+<body>
+    <div class="container">
+     <div class="row">
+     <div class="col-lg-4 col-md-4 col-xs-12">
+         <div id="bmibox">
+             <div id="bmicontent">
+                 <span id="text"> Height</span><span class="spacebmi"></span><input type="text" id="height" placeholder="     in meters" class="inputs" value="1.2"><br><br><br>
+                 <span id="text">Weight</span><span class="spacebmi"></span><input type="text" id="weight" placeholder="     in kilograms" class="inputs" value="56"><br><br><br>
+                 <div class="btn-primary btn-lg" onclick="bmi()">Calculate BMI</div>
+                 
+             </div>
+             <br><br>
+             <span class="bmiresulthide">
+                 <div id="result">Result<span class="glyphicon glyphicon-chevron-up upspace" onclick="bmidisappear()"></span></div>
+             <p id="bmiscore"> BMI SCORE:</p><p id="bmians"></p><br>
+              <img src="bmi_linear.png" id="bmi_linear"><br>
+              <img src="whrtriangle.png" id="whrtri">
+             </span>
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+         </div>
+         </div>
+       
+
+ <div class="col-lg-4 col-md-4 col-xs-12">
+         <div id="whrbox">
+              <div id="whrcontent">
+                  <span id="text">Waist</span><span class="spacebmi"></span><input type="text" id="waist" placeholder="   in meters" class="inputs"><br><br><br>
+                  <span id="text">Hip</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spacebmi"></span><input type="text" id="hip" placeholder="    in kilograms" class="inputs"><br><br><br>
+                <div class="btn-danger btn-lg" onclick="whr()">Calculate WHR</div>
+                  <br><br>
+                  <div id="whr-align">
+             <div id="whrresult">Result</div>
+             <p id="whrscore"> WHR SCORE:</p><p id="whrans"></p><br>
+              <img src="bmi_linear.png" id="whr_linear"><br>
+              <img src="triangle.png" id="tri">
+                  </div>
+                 
+             </div>
+             
+         </div>
+         </div>
+
+ <div class="col-lg-4 col-md-4 col-xs-12">
+         <div id="fatbox">
+              <div id="bmicontent">
+                  <span id="text">Height</span><span class="spacebmi"></span><input type="text" id="height" placeholder="in meters" class="inputs"><br><br><br>
+                  <span id="text">Weight</span><span class="spacebmi"></span><input type="text" id="weight" placeholder="in kilograms" class="inputs"><br><br><br>
+                 <div class="btn-success btn-lg">Calculate FAT %</div>
+             </div>
+             
+         </div>
+         </div>
+       
+    </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+</body>
+</html>
