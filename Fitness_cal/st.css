@@ -3,10 +3,12 @@ html{
     }
     body{
         font-size: .7rem;
+        
     }
     
     body{
         max-width: 100%;
+        background-image: linear-gradient(to right top, #00050f, #001835, #00245c, #002e85, #0035ac, #034cc8, #0364e3, #007cff, #00a4ff, #00c5ff, #00e2ff, #5ffbf1);
     }
     p{
         font-size: .65rem;
